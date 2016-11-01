@@ -892,7 +892,9 @@ class Key(object):
         # Overwrite user-supplied user-agent.
         for header in find_matching_headers('User-Agent', headers):
             del headers[header]
-        headers['User-Agent'] = UserAgent
+        #####################################
+        # headers['User-Agent'] = UserAgent #
+        #####################################
         # If storage_class is None, then a user has not explicitly requested
         # a storage class, so we can assume STANDARD here
         if self._storage_class not in [None, 'STANDARD']:
